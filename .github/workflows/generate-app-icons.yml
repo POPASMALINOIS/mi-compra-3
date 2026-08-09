@@ -1,0 +1,35 @@
+name: Generate Mi Compra app icons
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app-icon.svg'
+      - '.github/workflows/generate-app-icons.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  icons:
+    if: ${{ !contains(github.event.head_commit.message, '[skip icon build]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SVG renderer
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+      - name: Generate PNG icons
+        run: |
+          rsvg-convert -w 512 -h 512 app-icon.svg -o icon-512.png
+          rsvg-convert -w 192 -h 192 app-icon.svg -o icon-192.png
+          rsvg-convert -w 180 -h 180 app-icon.svg -o apple-touch-icon.png
+      - name: Commit generated icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add icon-512.png icon-192.png apple-touch-icon.png
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate Mi Compra app icons [skip icon build]"
+            git push
+          fi
