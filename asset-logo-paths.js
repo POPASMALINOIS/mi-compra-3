@@ -1,0 +1,1 @@
+window.logo=function(file){return './assets/'+file;};
