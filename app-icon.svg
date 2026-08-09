@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#ffffff"/>
+  <g fill="none" stroke="#168A46" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M132 168h38l31 156h170l38-126H185" stroke-width="28"/>
+    <path d="M215 252h155" stroke-width="22"/>
+  </g>
+  <circle cx="233" cy="369" r="22" fill="#168A46"/>
+  <circle cx="356" cy="369" r="22" fill="#168A46"/>
+  <path d="M230 155v-42h35v42" fill="#168A46"/>
+  <path d="M286 155v-51h52v51" fill="#8BC34A"/>
+  <path d="M318 103l20 18h-20z" fill="#6FAF3D"/>
+  <path d="M348 154c3-29 23-47 54-50-5 31-23 49-54 50z" fill="#6FAF3D"/>
+  <text x="256" y="456" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="53" font-weight="800" fill="#123B2A">MI <tspan fill="#168A46">COMPRA</tspan></text>
+</svg>
