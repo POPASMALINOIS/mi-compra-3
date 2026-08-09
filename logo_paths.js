@@ -1,1 +1,2 @@
-LOGOS['Lidl']=()=> './lidl.svg'; LOGOS['Carrefour']=()=> './carrefour.svg';
+LOGOS['Lidl']=()=> logo('lidl.png');
+LOGOS['Carrefour']=()=> logo('carrefour.webp');
