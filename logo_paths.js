@@ -1,0 +1,1 @@
+LOGOS['Lidl']=()=> './lidl.svg'; LOGOS['Carrefour']=()=> './carrefour.svg';
